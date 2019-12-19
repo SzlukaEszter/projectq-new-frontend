@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bfd76a4f-0ad5-43e7-ac58-6a665ba46269" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataElements/CountDown.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataElements/CountDown.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataElements/Ticket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataElements/Ticket.js" afterDir="false" />
-    </list>
+    <list default="true" id="bfd76a4f-0ad5-43e7-ac58-6a665ba46269" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +83,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576659958784</updated>
-      <workItem from="1576659960907" duration="23758000" />
+      <workItem from="1576659960907" duration="24051000" />
     </task>
     <task id="LOCAL-00001" summary="'implement login'">
       <created>1576679116152</created>
@@ -110,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576760937118</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="'reformat CountDown'">
+      <created>1576763653729</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1576763653729</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +135,8 @@
     <MESSAGE value="'implement login'" />
     <MESSAGE value="'add userView'" />
     <MESSAGE value="'add Ticket and CountDown'" />
-    <option name="LAST_COMMIT_MESSAGE" value="'add Ticket and CountDown'" />
+    <MESSAGE value="'reformat CountDown'" />
+    <option name="LAST_COMMIT_MESSAGE" value="'reformat CountDown'" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="128" key="#Inspections" timestamp="1576661727342">
@@ -143,10 +147,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="458" y="217" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877@0.23.1440.877" timestamp="1576661537788" />
-    <state x="233" y="66" key="CommitChangelistDialog2" timestamp="1576760936883">
+    <state x="233" y="66" key="CommitChangelistDialog2" timestamp="1576763653483">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="233" y="66" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1576760936883" />
+    <state x="233" y="66" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1576763653483" />
     <state width="689" height="217" key="GridCell.Tab.0.bottom" timestamp="1576763502383">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -167,6 +171,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="229" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1576665250194" />
+    <state x="320" y="189" key="Vcs.Push.Dialog.v2" timestamp="1576763670432">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="320" y="189" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1576763670432" />
     <state x="385" y="223" width="670" height="676" key="search.everywhere.popup" timestamp="1576763356673">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
