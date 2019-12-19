@@ -9,13 +9,13 @@ class LoginForm extends Component {
             background: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))',
             minHeight: '2vh',
             maxWidth: 'content-box',
-            padding: '5px'
+            padding: '20px'
         };
     }
 
     render() {
         return (
-            <div className="Login-container" style={this.getStyle()}>
+            <div className="Formcontainer" style={this.getStyle()}>
                 <Form>
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>

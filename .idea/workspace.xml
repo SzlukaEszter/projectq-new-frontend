@@ -2,22 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bfd76a4f-0ad5-43e7-ac58-6a665ba46269" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataElements/LoginForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataElements/NumberClaimForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Layout/1311141-letter-q-png-image-with-transparent-background-q-png-2923_2067.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Layout/AppNavigation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Layout/letter-q-alphabet-clip-art-letter-q-cliparts.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/customer-service.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/p034p90s_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sq_nn_mal_everest_190524.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataElements/Ticket.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Views/UserView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataElements/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataElements/LoginForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataElements/NumberClaimForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataElements/NumberClaimForm.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,15 +92,36 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576659958784</updated>
-      <workItem from="1576659960907" duration="13525000" />
+      <workItem from="1576659960907" duration="19832000" />
     </task>
+    <task id="LOCAL-00001" summary="'implement login'">
+      <created>1576679116152</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576679116153</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="'implement login'" />
+    <option name="LAST_COMMIT_MESSAGE" value="'implement login'" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="128" key="#Inspections" timestamp="1576661727342">
@@ -119,26 +132,26 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="458" y="217" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877@0.23.1440.877" timestamp="1576661537788" />
-    <state x="233" y="66" key="CommitChangelistDialog2" timestamp="1576679055445">
+    <state x="233" y="66" key="CommitChangelistDialog2" timestamp="1576679115696">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="233" y="66" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1576679055445" />
-    <state width="689" height="217" key="GridCell.Tab.0.bottom" timestamp="1576679058085">
+    <state x="233" y="66" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1576679115696" />
+    <state width="689" height="217" key="GridCell.Tab.0.bottom" timestamp="1576753694580">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="689" height="217" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1576679058085" />
-    <state width="689" height="217" key="GridCell.Tab.0.center" timestamp="1576679058083">
+    <state width="689" height="217" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1576753694580" />
+    <state width="689" height="217" key="GridCell.Tab.0.center" timestamp="1576753694577">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="689" height="217" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1576679058083" />
-    <state width="689" height="217" key="GridCell.Tab.0.left" timestamp="1576679058082">
+    <state width="689" height="217" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1576753694577" />
+    <state width="689" height="217" key="GridCell.Tab.0.left" timestamp="1576753694576">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="689" height="217" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1576679058082" />
-    <state width="689" height="217" key="GridCell.Tab.0.right" timestamp="1576679058084">
+    <state width="689" height="217" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1576753694576" />
+    <state width="689" height="217" key="GridCell.Tab.0.right" timestamp="1576753694577">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="689" height="217" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1576679058084" />
+    <state width="689" height="217" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1576753694577" />
     <state x="229" y="100" key="SettingsEditor" timestamp="1576665250194">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
