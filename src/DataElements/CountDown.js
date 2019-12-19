@@ -28,19 +28,20 @@ class Countdown extends Component {
         return  msToTime(milliseconds);
     };
 
+    getStyle() {
+        return {
+            backgroundColor: "white",
+            borderRadius: "6px",
+            padding: "5px",
+            color: "grey"
+            }
 
-
-    /*estimatedTime = () => {
-        let timeToWait = this.state.timeOfAppointment- this.state.timeOfRegistration;
-        let date = new Date(timeToWait);
-        return date.toLocaleTimeString();
-    };*/
-
+    }
 
     render() {
         return (
-            <div>
-                <p>{this.formattedTime(this.state.timeToWait)}</p>
+            <div style={this.getStyle()}>
+                {this.formattedTime(this.state.timeToWait)}
             </div>
         );
     }

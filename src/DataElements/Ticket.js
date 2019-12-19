@@ -14,10 +14,10 @@ class Ticket extends Component {
     }
     render(){
         return (
-            <div ClassName="ticket" style={this.getStyle()}>
+            <div className="ticket" style={this.getStyle()}>
                 <p>Waiting clients before you: {this.props.ticket.beforeMe}</p>
                 <h1>{this.props.ticket.id}</h1>
-                <p>Estimated time of appointment: </p>
+                <p>Time until your call:</p>
                 <Countdown timeToWait={this.calculateTimeToWait()}/>
             </div>
         );
