@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import NumberClaimForm from "../DataElements/NumberClaimForm";
-
+import Ticket from "../DataElements/Ticket";
 
 
 class UserView extends Component {
@@ -30,27 +30,25 @@ class UserView extends Component {
         const WelcomeCard = (
             <div>
                 <React.Fragment>
-                    <NumberClaimForm requestNumberProperty={this.requestNumber} casetypes={this.state.selectables[0]} officeLocations={this.state.selectables[1]}/>
+                    <NumberClaimForm requestNumberProperty={this.requestNumber} casetypes={this.state.selectables[0]}
+                                     officeLocations={this.state.selectables[1]}/>
                 </React.Fragment>
             </div>
         );
-        const ticket = <p/>;
-        /*(
+        const ticket = (
             <div>
-                <p>Waiting clients before you: {this.state.ticket.beforeMe}</p>
-                <h1>{this.state.ticket.id}</h1>
-                <p>Estimated time of appointment: </p>
                 <React.Fragment>
-                    <Countdown timeToWait={this.calculateTimeToWait()}/>
+                    <Ticket ticket={this.state.ticket}/>
                 </React.Fragment>
             </div>
-        );*/
+        );
+
 
         const loading = (
             <p>Loading...</p>
         );
 
-        const welcome = this.state.isLoaded? WelcomeCard : loading;
+        const welcome = this.state.isLoaded ? WelcomeCard : loading;
 
         return (
             <div className="App-container">
@@ -77,13 +75,6 @@ class UserView extends Component {
                         })
                 });
     };
-
-    calculateTimeToWait = () => {
-        let registerTime = this.state.ticket.timeOfRegistration;
-        let appointmentTime = this.state.ticket.estimatedTimeOfAppointment;
-        return appointmentTime - registerTime;
-    }
-
 
 }
 

@@ -38,7 +38,7 @@ class NumberClaimForm extends Component {
                         {caseTypes}
                     </Form.Control>
                 </Form.Group>
-                <Button variant="primary" type="submit">Get Your Number</Button>
+                <Button variant="primary" onClick={this.props.requestNumberProperty}>Get Your Number</Button>
             </Form>
             </div>
         );
