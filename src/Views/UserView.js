@@ -14,7 +14,7 @@ class UserView extends Component {
             beforeMe: 0,
             estimatedTimeOfAppointment: 0,
         },
-        selectables: [],
+        selectables: {},
         isLoaded: false
 
     };
@@ -30,8 +30,8 @@ class UserView extends Component {
         const WelcomeCard = (
             <div>
                 <React.Fragment>
-                    <NumberClaimForm requestNumberProperty={this.requestNumber} casetypes={this.state.selectables[0]}
-                                     officeLocations={this.state.selectables[1]}/>
+                    <NumberClaimForm requestNumberProperty={this.requestNumber} casetypes={this.state.selectables.caseTypeList}
+                                     officeLocations={this.state.selectables.offices}/>
                 </React.Fragment>
             </div>
         );

@@ -17,8 +17,8 @@ class NumberClaimForm extends Component {
     }
 
     render() {
-        const locations = this.props.officeLocations.map((location) =>
-            <option value={location}>{location}</option>);
+        const locations = this.props.officeLocations.map((office) =>
+            <option value={office}>{office}</option>);
 
         const caseTypes = this.props.casetypes.map((caseType) =>
             <option value={caseType}>{caseType}</option>);
