@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bfd76a4f-0ad5-43e7-ac58-6a665ba46269" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Views/LoginView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataElements/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataElements/LoginForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataElements/NumberClaimForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataElements/NumberClaimForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/UserView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/UserView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/LoginView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/LoginView.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1576659958784</updated>
       <workItem from="1576659960907" duration="24927000" />
-      <workItem from="1578300326053" duration="6831000" />
+      <workItem from="1578300326053" duration="10551000" />
     </task>
     <task id="LOCAL-00001" summary="'implement login'">
       <created>1576679116152</created>
@@ -131,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576763686488</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="'add Router'">
+      <created>1578314175556</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1578314175556</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +158,8 @@
     <MESSAGE value="'add userView'" />
     <MESSAGE value="'add Ticket and CountDown'" />
     <MESSAGE value="'reformat CountDown'" />
-    <option name="LAST_COMMIT_MESSAGE" value="'reformat CountDown'" />
+    <MESSAGE value="'add Router'" />
+    <option name="LAST_COMMIT_MESSAGE" value="'add Router'" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="128" key="#Inspections" timestamp="1576661727342">
@@ -167,9 +170,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="458" y="217" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877@0.23.1440.877" timestamp="1576661537788" />
-    <state x="233" y="66" key="CommitChangelistDialog2" timestamp="1576763686286">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="233" y="44" key="CommitChangelistDialog2" timestamp="1578314174978">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="233" y="44" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1578314174978" />
     <state x="233" y="66" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1576763686286" />
     <state width="425" height="217" key="GridCell.Tab.0.bottom" timestamp="1578310945724">
       <screen x="0" y="23" width="1440" height="877" />
@@ -191,9 +195,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="229" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1576665250194" />
-    <state x="320" y="189" key="Vcs.Push.Dialog.v2" timestamp="1576763670432">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="320" y="170" key="Vcs.Push.Dialog.v2" timestamp="1578314178922">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="320" y="170" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1578314178922" />
     <state x="320" y="189" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1576763670432" />
     <state x="385" y="223" width="670" height="676" key="search.everywhere.popup" timestamp="1578311793924">
       <screen x="0" y="23" width="1440" height="877" />
