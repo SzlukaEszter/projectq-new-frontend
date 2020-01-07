@@ -16,24 +16,13 @@ class UserView extends Component {
         },
         selectables: {},
         isLoaded: false
-
     };
 
 
     componentDidMount() {  // also a lifecycle method
-       let token = localStorage.getItem('token');
-        let config = {
-            headers: {"Authorization": "Bearer " + token, "Content-Type": "application/json"},
-            baseURL: 'http://localhost:8080'
-        };
-
-        axios.post('/', {}, config)
-            .then(res => this.setState({selectables: res.data, isLoaded: true}))
-            //this.setState({ todos: res.data }));
-            .catch(error => alert(error));
-
+        axios.defaults.headers.common["Authorization"] = "Bearer " + localStorage.getItem("token");
+        axios.post("http://localhost:8080/").then(res => console.log(res.data)).catch(res => console.log(res))
     }
-
 
     render() {
         const WelcomeCard = (

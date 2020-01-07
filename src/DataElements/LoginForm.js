@@ -62,7 +62,7 @@ class LoginForm extends Component {
         if (this.state.redirect) {
             return <Redirect to='/user' />
         }
-    }
+    };
 
     sendCredentials = () => {
         axios.post("http://localhost:8080/auth/signin", {"username" :this.state.username, "password": this.state.password})
@@ -70,8 +70,6 @@ class LoginForm extends Component {
                 res => {
                     console.log(res.data);
                     localStorage.setItem('token', res.data.token);
-                    //document.cookie ="token="+ res.data.token;
-                   // document.cookie("token").setHttpOnly(true);
                     this.setRedirect();
 
                 })
