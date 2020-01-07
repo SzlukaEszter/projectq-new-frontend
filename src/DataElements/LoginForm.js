@@ -2,11 +2,13 @@ import React, {Component} from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
+import { Redirect } from 'react-router-dom'
 
 class LoginForm extends Component {
  state = {
      username: null,
-     password: null
+     password: null,
+     redirect: false
  };
     getStyle() {
         return {
@@ -35,7 +37,10 @@ class LoginForm extends Component {
                         <Button variant="primary" type="button" onClick={this.sendCredentials}>Sign In</Button><br/>
                         <Button variant="secondary" type="button" disabled>Sign Up</Button>
                     </Form>
+                    {this.renderRedirect()}
                 </div>
+
+
         );
     }
 
@@ -49,10 +54,15 @@ class LoginForm extends Component {
         console.log(this.state);
     };
 
-    redirectToUserSite = () => {
-        axios.get("http://localhost:3000/user")
-            .catch(error => alert(error));
+    setRedirect = () => {
+        this.setState({redirect: true});
     };
+
+    renderRedirect = () => {
+        if (this.state.redirect) {
+            return <Redirect to='/user' />
+        }
+    }
 
     sendCredentials = () => {
         axios.post("http://localhost:8080/auth/signin", {"username" :this.state.username, "password": this.state.password})
@@ -62,7 +72,7 @@ class LoginForm extends Component {
                     localStorage.setItem('token', res.data.token);
                     //document.cookie ="token="+ res.data.token;
                    // document.cookie("token").setHttpOnly(true);
-                    this.redirectToUserSite();
+                    this.setRedirect();
 
                 })
             .catch(error => alert(error));

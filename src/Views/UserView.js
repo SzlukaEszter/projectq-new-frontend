@@ -19,12 +19,18 @@ class UserView extends Component {
 
     };
 
+
     componentDidMount() {  // also a lifecycle method
-        axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');
-        axios.post('http://localhost:8080')
+       let token = localStorage.getItem('token');
+        let config = {
+            headers: {"Authorization": "Bearer " + token, "Content-Type": "application/json"},
+            baseURL: 'http://localhost:8080'
+        };
+
+        axios.post('/', {}, config)
             .then(res => this.setState({selectables: res.data, isLoaded: true}))
-        //this.setState({ todos: res.data }));
-        .catch(error => alert(error));
+            //this.setState({ todos: res.data }));
+            .catch(error => alert(error));
 
     }
 
@@ -33,7 +39,8 @@ class UserView extends Component {
         const WelcomeCard = (
             <div>
                 <React.Fragment>
-                    <NumberClaimForm requestNumberProperty={this.requestNumber} casetypes={this.state.selectables.caseTypeList}
+                    <NumberClaimForm requestNumberProperty={this.requestNumber}
+                                     casetypes={this.state.selectables.caseTypeList}
                                      officeLocations={this.state.selectables.offices}/>
                 </React.Fragment>
             </div>
@@ -82,3 +89,4 @@ class UserView extends Component {
 }
 
 export default UserView;
+
