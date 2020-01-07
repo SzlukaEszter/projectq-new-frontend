@@ -49,13 +49,23 @@ class LoginForm extends Component {
         console.log(this.state);
     };
 
+    redirectToUserSite = () => {
+        axios.get("http://localhost:3000/user")
+            .catch(error => alert(error));
+    };
+
     sendCredentials = () => {
         axios.post("http://localhost:8080/auth/signin", {"username" :this.state.username, "password": this.state.password})
             .then(
                 res => {
                     console.log(res.data);
-                    document.cookie ="token="+ res.data.token;
-                });
+                    localStorage.setItem('token', res.data.token);
+                    //document.cookie ="token="+ res.data.token;
+                   // document.cookie("token").setHttpOnly(true);
+                    this.redirectToUserSite();
+
+                })
+            .catch(error => alert(error));
     }
 }
 
