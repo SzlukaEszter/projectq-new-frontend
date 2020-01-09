@@ -5,6 +5,8 @@ import AppNavigation from "./Layout/AppNavigation";
 import LoginView from "./Views/LoginView";
 import UserView from "./Views/UserView";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import RegisterView from "./Views/RegisterView";
+import WelcomeView from "./Views/WelcomeView";
 
 
 function App() {
@@ -14,7 +16,7 @@ function App() {
                 <div className="App">
                     <AppNavigation/>
                     <Switch>
-                        <Route path="/" exact component={LoginView}/>
+                        <Route path="/welcome" component={WelcomeView}/>
                         <Route path="/user" component={UserView}/>
                     </Switch>
                 </div>

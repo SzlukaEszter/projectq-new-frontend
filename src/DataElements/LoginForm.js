@@ -27,7 +27,6 @@ class LoginForm extends Component {
                             <Form.Label>Username</Form.Label>
                             <Form.Control type="username" placeholder="Username" onChange={event => this.setUn(event)}/>
                             <Form.Text className="text-muted">
-                                We'll never share your email with anyone else.
                             </Form.Text>
                         </Form.Group>
                         <Form.Group controlId="formBasicPassword">
@@ -35,7 +34,6 @@ class LoginForm extends Component {
                             <Form.Control type="password" placeholder="Password" onChange={event => this.setPw(event)}/>
                         </Form.Group>
                         <Button variant="primary" type="button" onClick={this.sendCredentials}>Sign In</Button><br/>
-                        <Button variant="secondary" type="button" disabled>Sign Up</Button>
                     </Form>
                     {this.renderRedirect()}
                 </div>
@@ -62,7 +60,7 @@ class LoginForm extends Component {
         if (this.state.redirect) {
             return <Redirect to='/user' />
         }
-    }
+    };
 
     sendCredentials = () => {
         axios.post("http://localhost:8080/auth/signin", {"username" :this.state.username, "password": this.state.password})
@@ -70,10 +68,7 @@ class LoginForm extends Component {
                 res => {
                     console.log(res.data);
                     localStorage.setItem('token', res.data.token);
-                    //document.cookie ="token="+ res.data.token;
-                   // document.cookie("token").setHttpOnly(true);
                     this.setRedirect();
-
                 })
             .catch(error => alert(error));
     }

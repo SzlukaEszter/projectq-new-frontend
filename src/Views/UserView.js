@@ -22,12 +22,8 @@ class UserView extends Component {
 
     componentDidMount() {  // also a lifecycle method
        let token = localStorage.getItem('token');
-        let config = {
-            headers: {"Authorization": "Bearer " + token, "Content-Type": "application/json"},
-            baseURL: 'http://localhost:8080'
-        };
-
-        axios.post('/', {}, config)
+        axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+            axios.post('http://localhost:8080')
             .then(res => this.setState({selectables: res.data, isLoaded: true}))
             //this.setState({ todos: res.data }));
             .catch(error => alert(error));
@@ -77,7 +73,6 @@ class UserView extends Component {
         })
             .then(
                 res => {
-                    console.log(res.data);
                     this.setState(
                         {
                             isTicket: true,
