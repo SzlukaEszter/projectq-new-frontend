@@ -37,21 +37,17 @@ class LoginForm extends Component {
                         <Button variant="primary" type="button" onClick={this.sendCredentials}>Sign In</Button><br/>
                         <Button variant="secondary" type="button" disabled>Sign Up</Button>
                     </Form>
-                    {this.renderRedirect()}
+                    //this.renderRedirect()
                 </div>
-
-
         );
     }
 
     setPw = (e) => {
         this.setState({password: e.target.value});
-        console.log(this.state);
     };
 
     setUn = (e) => {
         this.setState({username: e.target.value});
-        console.log(this.state);
     };
 
     setRedirect = () => {
@@ -65,13 +61,11 @@ class LoginForm extends Component {
     };
 
     sendCredentials = () => {
-        axios.post("http://localhost:8080/auth/signin", {"username" :this.state.username, "password": this.state.password})
+        axios.post("http://localhost:8080/auth/signin", {"username" :this.state.username, "password": this.state.password}, {withCredentials: true})
             .then(
                 res => {
-                    console.log(res.data);
-                    localStorage.setItem('token', res.data.token);
-                    this.setRedirect();
 
+                    axios.get("http://localhost:8080/test", {withCredentials: true})
                 })
             .catch(error => alert(error));
     }
