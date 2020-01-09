@@ -15,15 +15,24 @@ class UserView extends Component {
             estimatedTimeOfAppointment: 0,
         },
         selectables: {},
-        isLoaded: false
+        isLoaded: false,
 
     };
 
+    success(position) {
+        let locationData = {latitude: position.coords.latitude, longitude: position.coords.longitude};
+        //axios.defaults.headers.common["Authorization"] = "Bearer " + localStorage.getItem("token");
+        axios.post("http://localhost:8080/", locationData).then(res => this.setState({selectables: res.data, isLoaded:true}))
+            .catch(error => alert(error));
+    }
+
+    error() {
+            alert('Sorry, something went wrong. No geolocation data accessable');
+        }
 
     componentDidMount() {  // also a lifecycle method
-        //axios.defaults.headers.common["Authorization"] = "Bearer " + localStorage.getItem("token");
-        axios.post("http://localhost:8080/").then(res => this.setState({selectables: res.data, isLoaded:true}))
-            .catch(error => alert(error));
+        //gets browser's location and calls the callbacks provided in its parameters
+        navigator.geolocation.getCurrentPosition(this.success, this.error);
     }
 
 
