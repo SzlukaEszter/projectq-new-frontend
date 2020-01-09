@@ -21,9 +21,6 @@ class UserView extends Component {
 
     success(position) {
         let locationData = {latitude: position.coords.latitude, longitude: position.coords.longitude};
-        //axios.defaults.headers.common["Authorization"] = "Bearer " + localStorage.getItem("token");
-        axios.post("http://localhost:8080/", locationData).then(res => this.setState({selectables: res.data, isLoaded:true}))
-            .catch(error => alert(error));
     }
 
     error() {
@@ -33,6 +30,9 @@ class UserView extends Component {
     componentDidMount() {  // also a lifecycle method
         //gets browser's location and calls the callbacks provided in its parameters
         navigator.geolocation.getCurrentPosition(this.success, this.error);
+        //axios.defaults.headers.common["Authorization"] = "Bearer " + localStorage.getItem("token");
+        axios.post("http://localhost:8080/").then((res) => this.setState({selectables: res.data, isLoaded:true}))
+            .catch(error => alert(error));
     }
 
 
