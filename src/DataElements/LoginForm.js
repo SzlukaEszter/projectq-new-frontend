@@ -13,7 +13,6 @@ class LoginForm extends Component {
 
     getStyle() {
         return {
-            background: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))',
             minHeight: '2vh',
             maxWidth: 'content-box',
             padding: '20px',
@@ -33,7 +32,7 @@ class LoginForm extends Component {
             <div className="Formcontainer" style={this.getStyle()}>
                 <h2>Sign In</h2>
                 <Form>
-                    <Form.Group controlId="formBasicUsername" style={{paddingTop: '150px'}}>
+                    <Form.Group controlId="formBasicUsername" style={{paddingTop: '128px'}}>
                         <Form.Label>Username</Form.Label>
                         <Form.Control type="username" placeholder="Username" onChange={event => this.setUn(event)}/>
                         <Form.Text className="text-muted">

@@ -14,7 +14,6 @@ class RegisterForm extends Component {
 
     getStyle() {
         return {
-            background: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))',
             minHeight: '2vh',
             maxWidth: 'content-box',
             padding: '20px',
@@ -45,9 +44,6 @@ class RegisterForm extends Component {
                     <Form.Group controlId="formBasicUsername">
                         <Form.Label>Username</Form.Label>
                         <Form.Control type="email" placeholder="Email" onChange={event => this.setEmail(event)}/>
-                        <Form.Text className="text-muted">
-                            We'll never share your email with anyone else.
-                        </Form.Text>
                     </Form.Group>
                     <Button variant="primary" type="button" onClick={this.sendCredentials}>Sign Up</Button><br/>
                 </Form>

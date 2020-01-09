@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import NumberClaimForm from "../DataElements/NumberClaimForm";
 import Ticket from "../DataElements/Ticket";
+import Map from "../DataElements/Map";
 
 
 class UserView extends Component {
@@ -28,10 +29,7 @@ class UserView extends Component {
         }
 
     componentDidMount() {  // also a lifecycle method
-        //gets browser's location and calls the callbacks provided in its parameters
-        navigator.geolocation.getCurrentPosition(this.success, this.error);
-        //axios.defaults.headers.common["Authorization"] = "Bearer " + localStorage.getItem("token");
-        axios.post("http://localhost:8080/").then((res) => this.setState({selectables: res.data, isLoaded:true}))
+        axios.post("http://localhost:8080/").then(res => this.setState({selectables: res.data, isLoaded:true}))
             .catch(error => alert(error));
     }
 

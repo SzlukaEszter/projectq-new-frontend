@@ -7,6 +7,7 @@ import UserView from "./Views/UserView";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import RegisterView from "./Views/RegisterView";
 import WelcomeView from "./Views/WelcomeView";
+import HeadLine from "./Layout/HeadLine";
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
         <>
             <Router>
                 <div className="App">
-                    <AppNavigation/>
+                    <HeadLine/>
                     <Switch>
                         <Route path="/welcome" component={WelcomeView}/>
                         <Route path="/register" component={RegisterView}/>

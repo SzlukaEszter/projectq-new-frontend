@@ -8,14 +8,21 @@ import LoginForm from "../DataElements/LoginForm";
 
 class RegisterView extends Component {
 
+    getStyle() {
+        return {
+            background: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))',
+        };
+    }
+
     render() {
+
         return (
             <Container>
                 <Row>
-                    <Col>
+                    <Col style={this.getStyle()}>
                             <RegisterForm/>
                     </Col>
-                    <Col>
+                    <Col style={this.getStyle()}>
                             <LoginForm/>
                     </Col>
                 </Row>

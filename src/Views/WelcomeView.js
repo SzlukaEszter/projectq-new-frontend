@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import Button from "react-bootstrap/Button";
 import {Redirect} from "react-router-dom";
 import RegisterView from "./RegisterView";
+import HeadLine from "../Layout/HeadLine";
 
 class WelcomeView extends Component {
     state = {
@@ -37,22 +38,14 @@ class WelcomeView extends Component {
 
         return (
             <div className="welcome" style={this.getStyle()}>
-                <h1>Project Q</h1>
-                <h5>No more waiting client service management</h5><br/>
-                <div style={{textAlign: 'left', paddingTop: '200'}}>
-                    <h3 >What we do?</h3>
-                    <p>We provide smartphone ticket claiming at our partner's client
-                        services.
-                        All you have to do is to select the client service and the case you would like to deal with and
-                        claim a number.
-                        We will notify you just before your call.</p><br/>
-                    <h3>Have you ever wished if just you could get back the time you spent waiting to your call at a
-                        client
-                        service?</h3><br/>
+                <div style={{paddingTop: '300'}}>
+                    <h3>Have you ever wished if you could get back the time you spent waiting in queues?</h3><br/>
                     <h4>We give back your time.</h4><br/>
                     <Button variant="primary" onClick={() => this.setState({redirect: true})}>Great!</Button>
-                    {this.goToRegistration()}
+                    <p>All you have to do is to select where and what case you would like to deal with.
+                        We will notify you on your phone just before your call.</p>
                 </div>
+                    {this.goToRegistration()}
             </div>
         );
     }
