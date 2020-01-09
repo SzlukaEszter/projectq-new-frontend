@@ -1,17 +1,18 @@
 import React, {Component} from 'react';
 
 import Button from "react-bootstrap/Button";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
-import NumberClaimForm from "../DataElements/NumberClaimForm";
+import {Redirect} from "react-router-dom";
 import RegisterView from "./RegisterView";
-import LoginView from "./LoginView";
 
 class WelcomeView extends Component {
     state = {
-        showLogin: false,
-        showRegistration: false
+        redirect: false
     };
 
+    componentDidMount() {
+        console.log(this.state);
+        console.log(this);
+    }
 
     getStyle() {
         return {
@@ -22,50 +23,30 @@ class WelcomeView extends Component {
         };
     }
 
+    goToRegistration() {
+        if (this.state.redirect) {
+            console.log("redirect");
+            return (<Redirect to="/register"/>);
+        }
+    }
+
 
     render() {
-        const login = (
-            <div>
-                <React.Fragment>
-                    <LoginView/>
-                </React.Fragment>
-            </div>
-        );
-        const register = (
-            <div>
-                <React.Fragment>
-                    <RegisterView/>
-                </React.Fragment>
-            </div>
-        );
-
-        let form;
-        if (this.state.showLogin) {
-            form = login;
-        } else if (this.state.showRegistration) {
-            form = register;
-        }
-
-        let buttons = (
-                <React.Fragment>
-                <div className="d-flex flex-column">
-                    <ButtonGroup size="lg">
-                        <Button variant="primary" onClick={this.setState({showLogin: true})}>Sign In</Button>
-                        <Button variant="warning" onClick={this.setState({showRegistration: true})}>Sign Up</Button>
-                    </ButtonGroup>
-                </div>
-                </React.Fragment>
-            );
-
-        let changingContent = this.state.showLogin || this.state.showRegistration ? form : buttons;
-
 
         return (
             <div className="welcome" style={this.getStyle()}>
-                <h1>Welcome to our Client Service!</h1>
-                <h2>Please Sign in or Sign Up!</h2>
-                   {buttons}
-                    {form}
+                <h1>Project Q</h1>
+                <h3>No more waiting client service management</h3><br/>
+                <h2>What we do?</h2>
+                <h4>Have you ever wished if just you could get back the time you spent waiting to your call at a client
+                    service?</h4><br/>
+                <h4>We give back your time.</h4><br/>
+                <p>We provide smartphone ticket claiming at our partner's client services.
+                    All you have to do is to select the client service and the case you would like to deal with and
+                    claim a number.
+                    We will notify you just before your call.</p>
+                <Button variant="primary" onClick={() => this.setState({redirect: true})}>Primary</Button>
+                {this.goToRegistration()}
             </div>
         );
     }
