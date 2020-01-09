@@ -21,8 +21,9 @@ class UserView extends Component {
 
 
     componentDidMount() {  // also a lifecycle method
-        axios.defaults.headers.common["Authorization"] = "Bearer " + localStorage.getItem("token");
-        axios.post("http://localhost:8080/").then(res => console.log(res.data)).catch(res => console.log(res))
+        //axios.defaults.headers.common["Authorization"] = "Bearer " + localStorage.getItem("token");
+        axios.post("http://localhost:8080/").then(res => this.setState({selectables: res.data, isLoaded:true}))
+            .catch(error => alert(error));
     }
 
 

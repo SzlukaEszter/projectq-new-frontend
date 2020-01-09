@@ -17,7 +17,7 @@ function App() {
                     <AppNavigation/>
                     <Switch>
                         <Route path="/welcome" component={WelcomeView}/>
-                        <Route path="/register" component={LoginView}/>
+                        <Route path="/register" component={RegisterView}/>
                         <Route path="/user" component={UserView}/>
                     </Switch>
                 </div>
